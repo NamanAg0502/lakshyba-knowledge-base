@@ -1,7 +1,7 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { cn } from "@/lib/utils";
 
-interface SpinnerProps extends React.HTMLAttributes<HTMLDivElement> {}
+type SpinnerProps = React.HTMLAttributes<HTMLDivElement>;
 
 export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
   ({ className, ...props }, ref) => {
@@ -39,4 +39,4 @@ export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
   }
 );
 
-Spinner.displayName = 'Spinner';
+Spinner.displayName = "Spinner";

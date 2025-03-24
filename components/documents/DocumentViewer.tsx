@@ -96,9 +96,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
         setCurrentPage(page);
 
         // Scroll to top of document content when page changes
-        const contentElement = (document as any).getElementById(
-          "document-content"
-        );
+        const contentElement = document.getElementById("document-content");
         if (contentElement) {
           contentElement.scrollTop = 0;
         }
@@ -298,7 +296,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
           )}
       </div>
     );
-  }, [document]);
+  }, [initialDocument]);
 
   // Lazy-loaded citations tab
   const renderCitations = useCallback(() => {
@@ -357,7 +355,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
         )}
       </div>
     );
-  }, [document, citingDocuments]);
+  }, [citingDocuments, initialDocument.citations]);
 
   // Render pagination controls
   const renderPagination = () => (

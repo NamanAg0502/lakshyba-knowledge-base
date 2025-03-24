@@ -13,7 +13,6 @@ import dynamic from "next/dynamic";
 const DocumentViewer = dynamic(
   () => import("@/components/documents/DocumentViewer"),
   {
-    suspense: true,
     loading: () => <DocumentSkeleton />,
   }
 );

@@ -8,7 +8,6 @@ import {
   Bars3Icon,
   XMarkIcon,
   DocumentTextIcon,
-  MagnifyingGlassIcon,
   ArrowUpTrayIcon,
   BookOpenIcon,
 } from "@heroicons/react/24/outline";
